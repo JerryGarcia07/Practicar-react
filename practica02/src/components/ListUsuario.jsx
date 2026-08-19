@@ -2,14 +2,16 @@ import React from "react";
 import Usuarios from "./Usuarios";
 
 const ListUsuario = () => {
-  const usuario = {
-    nombre: "Ana",
-    edad: 24,
-    ciudad: "Lima",
-  };
+  const usuarios = [
+    { nombre: "Ana", activo: true },
+    { nombre: "Luis", activo: false },
+    { nombre: "Pedro", activo: true },
+  ];
   return (
     <div>
-      <Usuarios usuario={usuario} />
+      {usuarios.map((user, index) => (
+        <Usuarios usuario={user.nombre} key={index} activo={user.activo} />
+      ))}
     </div>
   );
 };

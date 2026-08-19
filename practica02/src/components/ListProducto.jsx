@@ -3,10 +3,21 @@ import Productos from "./Productos";
 
 const ListProducto = () => {
   const productos = [
-    { nombre: "Laptop", precio: 3500 },
-    { nombre: "Mouse", precio: 80 },
-    { nombre: "Monitor", precio: 900 },
-    { nombre: "Teclado", precio: 120 },
+    {
+      nombre: "Laptop",
+      precio: 3500,
+      stock: 10,
+    },
+    {
+      nombre: "Mouse",
+      precio: 80,
+      stock: 0,
+    },
+    {
+      nombre: "Monitor",
+      precio: 900,
+      stock: 5,
+    },
   ];
 
   let data = productos.reduce((prev, current) => prev + current.precio, 0);
@@ -14,7 +25,12 @@ const ListProducto = () => {
   return (
     <div>
       {productos.map((prod, index) => (
-        <Productos key={index} nombre={prod.nombre} precio={prod.precio} />
+        <Productos
+          key={index}
+          nombre={prod.nombre}
+          precio={prod.precio}
+          stock={prod.stock}
+        />
       ))}
       <hr />
       {productos
