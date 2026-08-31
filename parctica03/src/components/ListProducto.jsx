@@ -26,10 +26,11 @@ const ListProducto = () => {
     setProductos(data);
   };
 
-  const aumentraPrecio = (name) => {
-    setProductos((prev) =>
-      prev.map((prod) => {
-        if (prod.nombre === name) return { ...prod, precio: prod.precio * 1.1 };
+  const aumentraPrecio = (id) => {
+    setProductos(
+      productos.map((prod) => {
+        if (prod.id === id) return { ...prod, precio: prod.precio * 1.1 };
+        return prod;
       }),
     );
   };
@@ -41,18 +42,8 @@ const ListProducto = () => {
         {productos.map((product) => (
           <li key={product.id}>
             {product.nombre} - S/{product.precio}
-            <button
-              onClick={() => {
-                handleEliminar(product.id);
-              }}
-            >
-              Eliminar
-            </button>
-            <button
-              onClick={() => {
-                aumentraPrecio(productos.nombre);
-              }}
-            >
+            <button onClick={() => handleEliminar(product.id)}>Eliminar</button>
+            <button onClick={() => aumentraPrecio(product.id)}>
               Aumento de precio
             </button>
           </li>
