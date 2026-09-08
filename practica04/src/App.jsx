@@ -3,6 +3,7 @@ import Aumentos from "./components/Aumentos";
 import Button from "./components/Button";
 import Colores from "./components/Colores";
 import Input from "./components/input";
+import PrimerFormulario from "./components/PrimerFormulario";
 import Usuario from "./components/Usuario";
 import ValidarEdad from "./components/ValidarEdad";
 import ValidarNombre from "./components/ValidarNombre";
@@ -26,6 +27,8 @@ function App() {
       <ValidarEdad />
       <hr />
       <ValidarPassword />
+      <hr />
+      <PrimerFormulario />
     </>
   );
 }
