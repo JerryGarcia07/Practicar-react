@@ -1,11 +1,24 @@
 import React, { useState } from "react";
 
 const PrimerFormulario = () => {
-  const [data, setData] = useState("");
+  const [user, setUser] = useState({ Nombre: "", Edad: "" });
+  const [name, setName] = useState({});
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Formulario enviado");
+
+    setName(user);
+
+    setUser({ Nombre: "", Edad: "" });
+    console.log(name);
+  };
+
+  const handleName = (e) => {
+    setUser({ ...user, Nombre: e.target.value });
+  };
+
+  const handleEdad = (e) => {
+    setUser({ ...user, Edad: e.target.value });
   };
   return (
     <div>
@@ -13,13 +26,19 @@ const PrimerFormulario = () => {
         <label>Nombre:</label>
         <input
           type="text"
-          value={data}
-          onChange={(e) => setData(e.target.value)}
+          value={user.Nombre}
+          onChange={(e) => handleName(e)}
         />
+        <label>Edad</label>
+        <input type="text" value={user.Edad} onChange={(e) => handleEdad(e)} />
         <button type="submit">Enviar</button>
       </form>
 
-      <h2>Nombre enviado:</h2>
+      <ul>
+        {/* {name.map((use, index) => (
+          <li key={index}>Nombre: {use.Nombre}</li>
+        ))} */}
+      </ul>
     </div>
   );
 };
