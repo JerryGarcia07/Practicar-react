@@ -14,8 +14,13 @@ const VariosCampos = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(!)
+    if (!usuario.Nombre || !usuario.Edad || !usuario.Ciudad) return;
     setFormulario(usuario);
+    setUsuario({
+      Nombre: "",
+      Edad: "",
+      Ciudad: "",
+    });
   };
   return (
     <div>
@@ -43,6 +48,17 @@ const VariosCampos = () => {
         />
         <button>Aceptar</button>
       </form>
+      <div>
+        {Object.keys(formulario).length > 0 ? (
+          <>
+            <p>Nombre: {formulario.Nombre}</p>
+            <p>Edad: {formulario.Edad}</p>
+            <p>Ciudad: {formulario.Ciudad}</p>
+          </>
+        ) : (
+          "No hay datos"
+        )}
+      </div>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import "./App.css";
 import FormulariosBasico from "./components/FormulariosBasico";
+import VariosCampos from "./components/VariosCampos";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <hr />
       <FormulariosBasico />
       <hr />
+      <VariosCampos />
     </>
   );
 }
