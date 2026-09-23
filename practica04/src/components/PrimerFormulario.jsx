@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const PrimerFormulario = () => {
   const [user, setUser] = useState({ Nombre: "", Edad: "" });
@@ -6,11 +6,8 @@ const PrimerFormulario = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     setName(user);
-
     setUser({ Nombre: "", Edad: "" });
-    console.log(name);
   };
 
   const handleName = (e) => {
@@ -20,6 +17,7 @@ const PrimerFormulario = () => {
   const handleEdad = (e) => {
     setUser({ ...user, Edad: e.target.value });
   };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -35,9 +33,14 @@ const PrimerFormulario = () => {
       </form>
 
       <ul>
-        {/* {name.map((use, index) => (
-          <li key={index}>Nombre: {use.Nombre}</li>
-        ))} */}
+        {JSON.stringify(name) === "{}" ? (
+          "No hay"
+        ) : (
+          <>
+            <li>Nombre: {name.Nombre}</li>
+            <li>Edad: {name.Edad}</li>
+          </>
+        )}
       </ul>
     </div>
   );
