@@ -3,6 +3,7 @@ import Checkbox from "./components/Checkbox";
 import Contrasena from "./components/Contrasena";
 import FormularioCompleto from "./components/FormularioCompleto";
 import FormulariosBasico from "./components/FormulariosBasico";
+import FormulariosObjetos from "./components/FormulariosObjetos";
 import MostrarErrores from "./components/MostrarErrores";
 import RadioButtons from "./components/RadioButtons";
 import Select from "./components/Select";
@@ -34,6 +35,8 @@ function App() {
       <Checkbox />
       <hr />
       <RadioButtons />
+      <hr />
+      <FormulariosObjetos />
     </>
   );
 }
