@@ -2,9 +2,11 @@ import "./App.css";
 import Checkbox from "./components/Checkbox";
 import Contrasena from "./components/Contrasena";
 import FormularioCompleto from "./components/FormularioCompleto";
+import FormulariosArray from "./components/FormulariosArray";
 import FormulariosBasico from "./components/FormulariosBasico";
 import FormulariosObjetos from "./components/FormulariosObjetos";
 import MostrarErrores from "./components/MostrarErrores";
+import MostrarProductos from "./components/MostrarProductos";
 import RadioButtons from "./components/RadioButtons";
 import Select from "./components/Select";
 import ValidarCorreo from "./components/ValidarCorreo";
@@ -37,6 +39,10 @@ function App() {
       <RadioButtons />
       <hr />
       <FormulariosObjetos />
+      <hr />
+      <FormulariosArray />
+      <hr />
+      <MostrarProductos />
     </>
   );
 }

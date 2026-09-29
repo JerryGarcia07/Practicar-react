@@ -8,6 +8,7 @@ const FormulariosObjetos = () => {
     ciudad: "",
     profesion: "",
   });
+  const [formulario, setFormulario] = useState(null);
   const [mensaje, setMensaje] = useState("");
 
   const handleChange = (e) => {
@@ -26,9 +27,11 @@ const FormulariosObjetos = () => {
       !user.profesion
     ) {
       setMensaje("Ningun valor debe estar vacio");
+      setFormulario(null);
       return;
     }
     setMensaje("Datos enviados");
+    setFormulario(user);
     setUser({
       nombre: "",
       apellido: "",
@@ -80,18 +83,19 @@ const FormulariosObjetos = () => {
         <button type="submit">Aceptar</button>
       </form>
       <div>
-        {mensaje ? (
+        <div>{mensaje && mensaje}</div>
+        {formulario ? (
           <>
             <ul>
-              <li>{user.nombre}</li>
-              <li>{user.apellido}</li>
-              <li>{user.edad}</li>
-              <li>{user.ciudad}</li>
-              <li>{user.profesion}</li>
+              <li>{formulario.nombre}</li>
+              <li>{formulario.apellido}</li>
+              <li>{formulario.edad}</li>
+              <li>{formulario.ciudad}</li>
+              <li>{formulario.profesion}</li>
             </ul>
           </>
         ) : (
-          mensaje
+          "No hay datos"
         )}
       </div>
     </div>
