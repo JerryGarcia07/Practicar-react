@@ -1,13 +1,12 @@
 import React from "react";
 
-const Producto = (produc) => {
-  console.log(produc.produc);
-  const { nombre, precio, stock, categoria, eliminar } = produc.produc;
+const Producto = ({ produc, eliminar }) => {
+  const { id, nombre, precio, stock, categoria } = produc;
   return (
     <li>
       Nombre: {nombre} - Precio: {precio} - Stock: {stock} - Categoria:{" "}
       {categoria}
-      <button onClick={() => eliminar(nombre)}>Eliminar</button>
+      <button onClick={() => eliminar(id)}>Eliminar</button>
     </li>
   );
 };

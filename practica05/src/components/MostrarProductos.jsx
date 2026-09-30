@@ -27,7 +27,23 @@ const MostrarProductos = () => {
       setMensaje("Los datos no deben estar vacios");
       return;
     }
-    setFormulario([...formulario, producto]);
+
+    if (parseFloat(producto.precio) <= 0) {
+      setMensaje("Precio inválido (debe ser mayor a 0).");
+      return;
+    }
+
+    if (parseInt(producto.stock) <= 0) {
+      setMensaje("Stock inválido (no puede ser negativo).");
+      return;
+    }
+
+    const nuevoProducto = {
+      ...producto,
+      id: Date.now(), // Genera un ID único basado en el tiempo
+    };
+
+    setFormulario([...formulario, nuevoProducto]);
     setMensaje("");
     setProducto({
       nombre: "",
@@ -38,7 +54,7 @@ const MostrarProductos = () => {
   };
 
   const eliminar = (id) => {
-    setFormulario(formulario.filter((el) => el.nombre !== id));
+    setFormulario(formulario.filter((el) => el.id !== id));
   };
   return (
     <div>
@@ -54,8 +70,8 @@ const MostrarProductos = () => {
       <div>
         <ul>
           {formulario.length > 0
-            ? formulario.map((data, index) => (
-                <Producto produc={data} key={index} eliminar={eliminar} />
+            ? formulario.map((data) => (
+                <Producto produc={data} key={data.id} eliminar={eliminar} />
               ))
             : "No hay datos"}
         </ul>
