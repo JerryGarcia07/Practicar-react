@@ -10,6 +10,12 @@ import EstadoPedido from "./components/EstadoPedido";
 import Calificacion from "./components/Calificacion";
 import Temperatura from "./components/Temperatura";
 import NivelBateria from "./components/NivelBateria";
+import ListaVacia from "./components/ListaVacia";
+import ListaProductos from "./components/ListaProductos";
+import Usuarios from "./components/Usuarios";
+import FormularioLogin from "./components/FormularioLogin";
+import FormularioErrores from "./components/FormularioErrores";
+import ErroresUnicamente from "./components/ErroresUnicamente.jsx";
 
 function App() {
   return (
@@ -32,6 +38,18 @@ function App() {
       <Temperatura />
       <hr />
       <NivelBateria />
+      <hr />
+      <ListaVacia />
+      <hr />
+      <ListaProductos />
+      <hr />
+      <Usuarios />
+      <hr />
+      <FormularioLogin />
+      <hr />
+      <FormularioErrores />
+      <hr />
+      <ErroresUnicamente />
     </>
   );
 }
