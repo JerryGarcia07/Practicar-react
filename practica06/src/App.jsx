@@ -16,6 +16,10 @@ import Usuarios from "./components/Usuarios";
 import FormularioLogin from "./components/FormularioLogin";
 import FormularioErrores from "./components/FormularioErrores";
 import ErroresUnicamente from "./components/ErroresUnicamente.jsx";
+import EstadosPagina from "./components/EstadosPagina.jsx";
+import Permisos from "./components/Permisos.jsx";
+import AccesoSistema from "./components/AccesoSistema.jsx";
+import ProductoStockUsuario from "./components/ProductoStockUsuario.jsx";
 
 function App() {
   return (
@@ -50,6 +54,14 @@ function App() {
       <FormularioErrores />
       <hr />
       <ErroresUnicamente />
+      <hr />
+      <EstadosPagina />
+      <hr />
+      <Permisos />
+      <hr />
+      <AccesoSistema />
+      <hr />
+      <ProductoStockUsuario />
     </>
   );
 }
