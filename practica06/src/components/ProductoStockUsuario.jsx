@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import ComponenteProducto from "./ComponenteProducto";
 
 const ProductoStockUsuario = () => {
   const [logueado, setLogueado] = useState(true);
 
   const producto = {
     nombre: "Laptop",
+    precio: 1500,
     stock: 3,
   };
 
@@ -15,17 +17,7 @@ const ProductoStockUsuario = () => {
         {logueado ? "Cerrar Session" : "Iniciar sesión"}
       </button>
       {logueado ? (
-        <ul>
-          <li>{producto.nombre}</li>
-          {producto.stock > 0 ? (
-            <>
-              <li>{producto.stock}</li>
-              <button>comprar</button>
-            </>
-          ) : (
-            <li>Producto agotado.</li>
-          )}
-        </ul>
+        <ComponenteProducto producto={producto} />
       ) : (
         "Debes iniciar sesión para comprar."
       )}
