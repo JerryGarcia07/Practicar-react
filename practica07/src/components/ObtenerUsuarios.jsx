@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ListaUsuarios from "./ListaUsuarios";
 
 const ObtenerUsuarios = () => {
   const [info, setInfo] = useState([]);
@@ -24,26 +25,9 @@ const ObtenerUsuarios = () => {
     obteneruser();
   }, []);
   return (
-    <div>
-      {loading && <p>⏳ Cargando usuarios...</p>}
-      {!loading && error && <p>{error}</p>}
-      {!loading && !error && (
-        <>
-          <div>
-            <h2>Obtener Usuarios</h2>
-            {info &&
-              info.map((dat) => (
-                <ul key={dat.id}>
-                  <li>Nombre: {dat.name}</li>
-                  <li>Correo: {dat.email}</li>
-                  <li>Ciudad: {dat.address.city}</li>
-                </ul>
-              ))}
-            {info.length > 0 && <p>Total de usuarios: {info.length}</p>}
-          </div>
-        </>
-      )}
-    </div>
+    <>
+      <ListaUsuarios loading={loading} error={error} info={info} />
+    </>
   );
 };
 
