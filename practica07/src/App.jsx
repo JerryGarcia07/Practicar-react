@@ -5,6 +5,7 @@ import ObtenerUsuarios from "./components/ObtenerUsuarios";
 import APICondicional from "./components/APICondicional";
 import BuscarUsuario from "./components/BuscarUsuario";
 import PostsUsuario from "./components/PostsUsuario";
+import SeleccionarUsuario from "./components/SeleccionarUsuario";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
       <APICondicional /> */}
       <hr />
       {/* <BuscarUsuario /> */}
-      <PostsUsuario />
+      {/* <PostsUsuario /> */}
+      <hr />
+      <SeleccionarUsuario />
     </>
   );
 }
