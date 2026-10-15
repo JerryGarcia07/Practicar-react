@@ -16,7 +16,6 @@ const BuscarUsuario = () => {
           throw new Error("Error en la conexion de a la base de datos");
 
         const json = await info.json();
-
         setData(json);
       } catch (error) {
         setEror("❌ No se pudieron obtener los usuarios." + error);

@@ -6,6 +6,7 @@ import APICondicional from "./components/APICondicional";
 import BuscarUsuario from "./components/BuscarUsuario";
 import PostsUsuario from "./components/PostsUsuario";
 import SeleccionarUsuario from "./components/SeleccionarUsuario";
+import UsuarioFormulario from "./components/UsuarioFormulario";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
       {/* <PostsUsuario /> */}
       <hr />
       <SeleccionarUsuario />
+      <hr />
+      <UsuarioFormulario />
     </>
   );
 }
