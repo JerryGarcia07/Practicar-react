@@ -8,7 +8,7 @@ const UsuarioFormulario = () => {
   const [listUser, setListUser] = useState([]);
   const [userFiltrado, setUserFiltrado] = useState([]);
 
-  const HandleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     setUserFiltrado(
@@ -40,7 +40,7 @@ const UsuarioFormulario = () => {
   return (
     <div>
       <div>
-        <form onSubmit={HandleSubmit}>
+        <form onSubmit={handleSubmit}>
           <label>Buscar usuario:</label>
           <input
             type="text"

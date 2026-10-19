@@ -7,6 +7,7 @@ import BuscarUsuario from "./components/BuscarUsuario";
 import PostsUsuario from "./components/PostsUsuario";
 import SeleccionarUsuario from "./components/SeleccionarUsuario";
 import UsuarioFormulario from "./components/UsuarioFormulario";
+import FormularioAPI from "./components/FormularioAPI";
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
       {/* <BuscarUsuario /> */}
       {/* <PostsUsuario /> */}
       <hr />
-      <SeleccionarUsuario />
+      {/* <SeleccionarUsuario />
       <hr />
-      <UsuarioFormulario />
+      <UsuarioFormulario /> */}
+      <FormularioAPI />
     </>
   );
 }
