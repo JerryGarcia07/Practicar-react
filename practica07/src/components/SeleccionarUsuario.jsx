@@ -53,7 +53,7 @@ const SeleccionarUsuario = () => {
       }
     };
     obtenerPost();
-  }, [userid]);
+  }, []);
 
   return (
     <div>
