@@ -56,7 +56,7 @@ const Mostrar5Posts = () => {
           </button>
           <button
             onClick={() => setNumeroNext(numeoNext + 5)}
-            disabled={numeoNext === 95}
+            disabled={numeoNext + 5 >= info.length}
           >
             Siguiente
           </button>

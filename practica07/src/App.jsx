@@ -10,6 +10,7 @@ import UsuarioFormulario from "./components/UsuarioFormulario";
 import FormularioAPI from "./components/FormularioAPI";
 import BuscarPostsUsuario from "./components/BuscarPostsUsuario.jsx";
 import Mostrar5Posts from "./components/Mostrar5Posts.jsx";
+import ListaTareasAPI from "./components/ListaTareasAPI.jsx";
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
       <UsuarioFormulario /> */}
       {/* <FormularioAPI /> */}
       {/* <BuscarPostsUsuario /> */}
-      <Mostrar5Posts />
+      {/* <Mostrar5Posts /> */}
+      <ListaTareasAPI />
     </>
   );
 }
